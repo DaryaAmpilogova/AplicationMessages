@@ -110,11 +110,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -123,11 +119,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="img\1419365876_on-off.png" />
+    <Content Include="img\casemanager.png" />
+    <Content Include="img\config.png" />
+    <Content Include="img\daily-care-o-gram.png" />
+    <Content Include="img\dot3.png" />
+    <Content Include="img\Ellipse 1.png" />
+    <Content Include="img\Layer 2.png" />
+    <Content Include="img\Layer 3.png" />
+    <Content Include="img\list.png" />
+    <Content Include="img\logo-easy-connect_SBS.png" />
+    <Content Include="img\my-health-reports %281%29.png" />
+    <Content Include="img\Rectangle 1.png" />
+    <Content Include="img\Rectangle 2.png" />
+    <Content Include="img\reminders-calendar.png" />
+    <Content Include="img\reward-points %281%29.png" />
+    <Content Include="img\senior.png" />
+    <Content Include="img\square.png" />
+    <Content Include="img\ties2.png" />
+    <Content Include="img\Titular barra.png" />
+    <Content Include="img\warnings-off2.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -199,12 +211,14 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
