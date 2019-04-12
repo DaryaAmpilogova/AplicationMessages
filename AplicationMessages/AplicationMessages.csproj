@@ -46,13 +46,14 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MyEasyConnect">
-      <HintPath>..\..\..\..\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\MyEasyConnect.dll</HintPath>
+      <HintPath>..\..\..\..\source\repos\MyEasyConnect\MyEasyConnection\MyEasyConnect\bin\MyEasyConnect.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
