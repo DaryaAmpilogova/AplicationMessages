@@ -12,11 +12,14 @@ namespace AplicationMessages
     public partial class _Default : Page
     {
         public CurrentUserRS user;
+        public GetMessagesRS messages;
+        public GetCircleOfCareRS getCircleOfCare;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string uri = ConfigurationManager.AppSettings["current_user"];
-            user = GetJson<CurrentUserRS>(null, uri);
+            user = GetJson<CurrentUserRS>(null, ConfigurationManager.AppSettings["current_user"]);
+            messages = GetJson<GetMessagesRS>(null, ConfigurationManager.AppSettings["messages"]);
+            getCircleOfCare = GetJson<GetCircleOfCareRS>(null, ConfigurationManager.AppSettings["circle"]);
         }
 
         private static T GetJson<T>(object rq, string endpoint)

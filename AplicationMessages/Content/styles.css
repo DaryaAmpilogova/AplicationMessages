@@ -389,8 +389,10 @@ button:hover {
     transform: rotate(-90deg);
 }
 
-button.open { 
+button.open {
     transform: rotate(0deg);
+    height: 100%;
+    width: 100%;
 }
 
 .messages button:hover {
