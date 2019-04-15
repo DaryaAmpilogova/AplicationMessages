@@ -169,8 +169,9 @@
                    for (int i = 0; i < messages.Messages.Count; i++)
                    {
                 %>
-                <div class="messages">
-                    <input type="checkbox" name="" id="" checked>
+                <div class="email" meta-email="<%=i%>">
+                    <div class="messages">
+                    <input type="checkbox" name="" id="" checked/>
                     <div class="user">
                         <div class="user-status <%
                             if (messages.Messages[i].State == 0)
@@ -185,7 +186,7 @@
                                 offline
                                 <%
                             }
-                            %>"></div>
+                            %>" meta-email="<%=i%>"></div>
                         <p class="user-name"><%=messages.Messages[i].Sender.Name + " " + messages.Messages[i].Sender.Surnames%></p>
                     </div>
                     <div class="message-title">
@@ -194,16 +195,17 @@
                     <div class="message-date">
                         <p><%=messages.Messages[i].Date.ToString("dd MMM yyyy") %></p>
                     </div>
-                    <img class="open" src="img/abajo.png">
+                    <img class="open" src="img/derecha.png" meta-email="<%=i%>">
                 </div>
-                <div class="message-content">
+                <div class="message-content" meta-email="<%=i%>">
                     <p><%=messages.Messages[i].Subject %></p>
                     <p><%=messages.Messages[i].Content %>
                     </p>
                     <div class="btn-container">
                         <button class="reply-message">REPLY</button>
-                        <button class="delete-message">DELETE</button>
+                        <button class="delete-message" meta-email="<%=i%>">DELETE</button>
                     </div>
+                </div>
                 </div>
                 <%
                    }
@@ -441,5 +443,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    <script src="Scripts/funcMessages.js"></script>
+
 </asp:Content>
