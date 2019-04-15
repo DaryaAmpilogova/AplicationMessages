@@ -2,6 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <div class="container">
         <nav>
             <div class="logo">
@@ -137,8 +138,7 @@
                 </div>
                 <div class="score">
                     <p class="total-points">
-                        Total Points
-                        <span>725</span>
+                        <%="Total Points " + point.PointsRS.Points%>
                     </p>
                 </div>
             </div>
@@ -284,15 +284,19 @@
                     <div class="reminder-title contact">
                         <i class="fas fa-phone"></i>
                         <div class="title-info">
-                            <p>Call Dr.Smith</p>
-                            <p>675 557 890</p>
+                            <p><%=reminder.Memory.Note%></p>
+                            <p><%=reminder.Memory.PhoneNumber%></p>
+                            <!--<p>Call Dr.Smith</p>
+                            <p>675 557 890</p>-->
                         </div>
                     </div>
                     <div class="reminder-title">
                         <i class="far fa-calendar-alt"></i>
                         <div class="title-info">
-                            <p>Ocular Test</p>
-                            <p>Memorial Clinic Miami</p>
+                            <p><%=reminder.Memory.Title%></p>
+                            <p><%=reminder.Memory.Address%></p>
+                            <!--<p>Ocular Test</p>
+                            <p>Memorial Clinic Miami</p>-->
                         </div>
                         <button class="dismiss">
                             <i class="fas fa-times"></i>
@@ -300,13 +304,15 @@
                     </div>
                     <div class="reminder-content">
                         <div class="date-time">
-                            2 JULY 2012 /
-                            <span class="time">14:30</span>
+                            <p><%=reminder.Memory.ReminderDate%></p>
+                            <!--2 JULY 2012 /
+                            <span class="time">14:30</span>-->
                         </div>
                         <div class="description">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo itaque sed ipsa debitis porro doloremque
+                            <p><%=reminder.Memory.Description%>                                
+                                <!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo itaque sed ipsa debitis porro doloremque
                                 quo quos ut exercitationem. Eaque corporis magni tempore tempora blanditiis ad iusto, dignissimos
-                                nobis placeat?</p>
+                                nobis placeat?--></p>
                         </div>
                         <div class="buttons">
                             <button class="change">CHANGE</button>
