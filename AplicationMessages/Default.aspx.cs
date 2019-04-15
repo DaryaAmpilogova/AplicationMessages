@@ -22,8 +22,6 @@ namespace AplicationMessages
             user = GetJson<CurrentUserRS>(null, ConfigurationManager.AppSettings["current_user"]);
             messages = GetJson<GetMessagesRS>(null, ConfigurationManager.AppSettings["messages"]);
             getCircleOfCare = GetJson<GetCircleOfCareRS>(null, ConfigurationManager.AppSettings["circle"]);
-            string uri = ConfigurationManager.AppSettings["current_user"];
-            user = GetJson<CurrentUserRS>(null, uri);            
             point = GetJson<UserPointsRS>(null, ConfigurationManager.AppSettings["points"]);
             reminder = GetJson<ReminderRS>(null, ConfigurationManager.AppSettings["reminders"]);
         }
