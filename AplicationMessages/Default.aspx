@@ -443,5 +443,6 @@
             </div>
         </div>
     </div>
+    <script src="Scripts/funcMessages.js"></script>
 
 </asp:Content>
