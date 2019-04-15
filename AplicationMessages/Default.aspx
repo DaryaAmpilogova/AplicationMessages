@@ -195,7 +195,7 @@
                     <div class="message-date">
                         <p><%=messages.Messages[i].Date.ToString("dd MMM yyyy") %></p>
                     </div>
-                    <img class="open" src="img/abajo.png">
+                    <img class="open" src="img/derecha.png">
                 </div>
                 <div class="message-content">
                     <p><%=messages.Messages[i].Subject %></p>

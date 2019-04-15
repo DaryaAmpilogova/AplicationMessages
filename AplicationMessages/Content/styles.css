@@ -406,7 +406,7 @@ button.open {
     padding-top: 17px;
     background-color: #f9f9f9;
     font-family: Arial, Helvetica, sans-serif;
-
+    display: none;
 }
 
 .message-content p:first-child {
