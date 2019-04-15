@@ -11,7 +11,7 @@
 
             <div class="content-right">
                 <div class="avatar">
-                    <img src="img/senior.png" alt="user-avatar">
+                    <img src="<%=user.UserRS.Avatar %>" alt="user-avatar">
                     <div class="notifications">
                         <p class="notification-number">6</p>
                     </div>
@@ -166,97 +166,49 @@
                     </div>
 
                 </nav>
+                <%
+                   for (int i = 0; i < messages.Messages.Count; i++)
+                   {
+                %>
                 <div class="messages">
                     <input type="checkbox" name="" id="" checked>
                     <div class="user">
-                        <div class="user-status inactive"></div>
-                        <p class="user-name">John Snow</p>
+                        <div class="user-status <%
+                            if (messages.Messages[i].State == 0)
+                            {
+                                %>
+                                inactive
+                                <%
+                            }
+                            else
+                            {
+                                %>
+                                offline
+                                <%
+                            }
+                            %>"></div>
+                        <p class="user-name"><%=messages.Messages[i].Sender.Name + " " + messages.Messages[i].Sender.Surnames%></p>
                     </div>
                     <div class="message-title">
-                        <p>Hi Friend!!</p>
+                        <p><%=messages.Messages[i].Subject %></p>
                     </div>
                     <div class="message-date">
-                        <p>12 April 2014</p>
+                        <p><%=messages.Messages[i].Date.ToString("dd MMM yyyy") %></p>
                     </div>
-                    <button class="open">
-                        <i class="fas fa-sort-down"></i>
-                    </button>
+                    <img class="open" src="img/abajo.png">
                 </div>
                 <div class="message-content">
-                    <p>Hi Friend!!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora eius modi ipsam aspernatur
-                        iure obcaecati, optio sed, dolores rerum, voluptates ea a unde aperiam accusamus omnis nam numquam
-                        ad?
+                    <p><%=messages.Messages[i].Subject %></p>
+                    <p><%=messages.Messages[i].Content %>
                     </p>
                     <div class="btn-container">
                         <button class="reply-message">REPLY</button>
                         <button class="delete-message">DELETE</button>
                     </div>
                 </div>
-                <div class="messages">
-                    <input type="checkbox" name="" id="">
-                    <div class="user">
-                        <div class="user-status offline"></div>
-                        <p class="user-name">Richard Chaning</p>
-                    </div>
-                    <div class="message-title">
-                        <p>Memorial Clinic</p>
-                    </div>
-                    <div class="message-date">
-                        <p>12 April 2014</p>
-                    </div>
-                    <button>
-                        <i class="fas fa-sort-down"></i>
-                    </button>
-                </div>
-                <div class="messages">
-                    <input type="checkbox" name="" id="">
-                    <div class="user">
-                        <div class="user-status offline"></div>
-                        <p class="user-name">Elisabeth Bale</p>
-                    </div>
-                    <div class="message-title">
-                        <p>From Connecticut</p>
-                    </div>
-                    <div class="message-date">
-                        <p>21 June 2013</p>
-                    </div>
-                    <button>
-                        <i class="fas fa-sort-down"></i>
-                    </button>
-                </div>
-                <div class="messages">
-                    <input type="checkbox" name="" id="">
-                    <div class="user">
-                        <div class="user-status offline"></div>
-                        <p class="user-name">Sarah Connor</p>
-                    </div>
-                    <div class="message-title">
-                        <p>Cyberdyne Systems</p>
-                    </div>
-                    <div class="message-date">
-                        <p>20 June 2013</p>
-                    </div>
-                    <button>
-                        <i class="fas fa-sort-down"></i>
-                    </button>
-                </div>
-                <div class="messages">
-                    <input type="checkbox" name="" id="">
-                    <div class="user">
-                        <div class="user-status offline"></div>
-                        <p class="user-name">Arturo González</p>
-                    </div>
-                    <div class="message-title">
-                        <p>Recordatorio Consulta</p>
-                    </div>
-                    <div class="message-date">
-                        <p>20 June 2013</p>
-                    </div>
-                    <button>
-                        <i class="fas fa-sort-down"></i>
-                    </button>
-                </div>
+                <%
+                   }
+                %>
             </div>
         </div>
         <div class="reminders-calendar">
@@ -460,14 +412,18 @@
                         </p>
                     </div>
                     <div class="people">
+                        <%
+                            for (int i = 0; i < getCircleOfCare.Users.Count; i++)
+                            {
+                        %>
                         <div class="people-card">
                             <div class="left-column-red"></div>
                             <div class="user-detail">
                                 <div class="name">
                                     <p>
-                                        <b>Francis Fisher Williams</b>
+                                        <b><%=getCircleOfCare.Users[i].Name + " " + getCircleOfCare.Users[i].Surnames %></b>
                                     </p>
-                                    <p>Graphic Designer</p>
+                                    <p><%=getCircleOfCare.Users[i].Profession %></p>
                                 </div>
                                 <div class="image">
                                     <img src="img/senior.png" alt="user-image">
@@ -479,82 +435,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="people-card">
-                            <div class="left-column-green"></div>
-                            <div class="user-detail">
-                                <div class="name">
-                                    <p>
-                                        <b>Marie Kraft Smith</b>
-                                    </p>
-                                    <p>Doctor</p>
-                                </div>
-                                <div class="image">
-                                    <img src="img/senior.png" alt="user-image">
-                                </div>
-                                <div class="message-green">
-                                    <button>
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-card">
-                            <div class="left-column-red"></div>
-                            <div class="user-detail">
-                                <div class="name">
-                                    <p>
-                                        <b>Dolores Vidal Taylor</b>
-                                    </p>
-                                    <p>Comercial</p>
-                                </div>
-                                <div class="image">
-                                    <img src="img/senior.png" alt="user-image">
-                                </div>
-                                <div class="message">
-                                    <button>
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-card">
-                            <div class="left-column-red"></div>
-                            <div class="user-detail">
-                                <div class="name">
-                                    <p>
-                                        <b>Robbie Walker Jr.</b>
-                                    </p>
-                                    <p>CEO NY Memorial</p>
-                                </div>
-                                <div class="image">
-                                    <img src="img/senior.png" alt="user-image">
-                                </div>
-                                <div class="message">
-                                    <button>
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-card">
-                            <div class="left-column-green"></div>
-                            <div class="user-detail">
-                                <div class="name">
-                                    <p>
-                                        <b>Vanessa Herrera Simons</b>
-                                    </p>
-                                    <p>Nurse</p>
-                                </div>
-                                <div class="image">
-                                    <img src="img/senior.png" alt="user-image">
-                                </div>
-                                <div class="message-green">
-                                    <button>
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        <%
+                            }
+                        %>
                     </div>
                 </div>
             </div>
