@@ -123,6 +123,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\Reminder.js" />
     <Content Include="Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="img\1419365876_on-off.png" />

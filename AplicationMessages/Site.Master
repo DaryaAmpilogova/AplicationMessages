@@ -9,7 +9,7 @@
     <title>My ASP.NET Application</title>
 
     <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
+        <%: Scripts.Render("~/bundles/modernizr") %>        
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/styles.css" />

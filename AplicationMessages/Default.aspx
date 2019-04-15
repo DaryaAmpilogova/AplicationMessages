@@ -1,7 +1,6 @@
-﻿<%@ Page Title="Welcome to your account" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AplicationMessages._Default" %>
+﻿<%@ Page Title="Welcome to your account" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AplicationMessages._Default"%>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <div class="container">
         <nav>
@@ -442,6 +441,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div>    
 </asp:Content>
