@@ -15,10 +15,10 @@
                         <p class="notification-number">6</p>
                     </div>
                     <p class="user-name">
-                        Cordelia Carpenter
+                        <%=user.UserRS.Name + " " + user.UserRS.Surnames%>
                     </p>
                 </div>
-
+                
                 <div class="settings">
                     <img src="img/config.png" alt="settings">
                     <p>SETTINGS</p>
